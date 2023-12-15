@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { increaseItem, decreaseItem } from "../reducers/cartSlice.ts";
-import { RootState } from "../reducers/store.ts";
+import { increaseItem, decreaseItem } from "../reducers/cartSlice";
+import { RootState } from "../reducers/store";
 
 import { useMemo } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
@@ -104,6 +104,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 16,
+    color: "white",
     fontWeight: "bold",
   },
 });

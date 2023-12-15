@@ -11,7 +11,6 @@ import {
   Image,
   TouchableOpacity,
   ScrollView,
-  TextInput,
   StyleSheet,
 } from "react-native";
 
