@@ -31,47 +31,32 @@ const AddToCartButton: React.FC<{ sku: string }> = ({ sku }) => {
       return {
         onClick: () => handleIncreaseItem(sku),
         text: "Add to Cart",
-        bg_color: {
-          backgroundColor: "black",
-        },
-        text_color: {
-          color: "white",
-        },
       };
     }
     return {
       text: `Items (${quantity})`,
-      bg_color: {
-        backgroundColor: "indigo",
-      },
-      text_color: {
-        color: "white",
-      },
     };
   }, [quantity, sku, handleIncreaseItem]);
 
-  const { text, bg_color, onClick, text_color } = data;
+  const { text, onClick } = data;
 
   return (
     <View style={styles.container}>
       {quantity >= 1 && (
         <TouchableOpacity
           onPress={() => handleDecreaseItem(sku)}
-          style={styles.button}
+          style={styles.buttonChanger}
         >
           <Text style={styles.buttonText}>-</Text>
         </TouchableOpacity>
       )}
-      <TouchableOpacity
-        onPress={onClick}
-        style={[styles.button, bg_color, text_color]}
-      >
+      <TouchableOpacity onPress={onClick} style={[styles.button]}>
         <Text style={styles.buttonText}>{text}</Text>
       </TouchableOpacity>
       {quantity >= 1 && (
         <TouchableOpacity
           onPress={() => handleIncreaseItem(sku)}
-          style={styles.button}
+          style={styles.buttonChanger}
         >
           <Text style={styles.buttonText}>+</Text>
         </TouchableOpacity>
@@ -93,7 +78,8 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     margin: 4,
     padding: 8,
-    shadowColor: "#000",
+    backgroundColor: "#7A8FF8",
+    shadowColor: "#7A8FF8",
     shadowOffset: {
       width: 0,
       height: 2,
@@ -103,9 +89,15 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: 14,
     color: "white",
     fontWeight: "bold",
+  },
+
+  buttonChanger: {
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 2,
   },
 });
 

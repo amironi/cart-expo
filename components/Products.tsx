@@ -121,17 +121,20 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     resizeMode: "cover",
+    borderRadius: 8,
   },
   productDetailsContainer: {
     flex: 1,
-    marginLeft: 16,
+    marginHorizontal: 16,
   },
   productName: {
-    fontSize: 16,
+    fontSize: 18,
+    textTransform: "uppercase",
     fontWeight: "bold",
     color: "#FFFFFF",
   },
   productPrice: {
+    marginTop: 8,
     fontSize: 14,
     color: "#8F8F8F",
   },
@@ -146,7 +149,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 8,
     padding: 16,
-    backgroundColor: "#00695C",
+    backgroundColor: "#000",
     marginHorizontal: 8,
   },
   buttonText: {
