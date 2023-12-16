@@ -83,7 +83,14 @@ const Products: React.FC = () => {
           onPress={handleClear}
           style={[styles.button, cartItems.length === 0 && { opacity: 0.5 }]}
         >
-          <Text style={styles.buttonText}>Clear</Text>
+          <Text
+            style={[
+              styles.buttonText,
+              cartItems.length === 0 && { color: "white" },
+            ]}
+          >
+            Clear
+          </Text>
         </TouchableOpacity>
         <View style={styles.totalPriceContainer}>
           <Text style={styles.totalPrice}>₪ {totalPrice.toFixed(2)}</Text>
@@ -93,7 +100,14 @@ const Products: React.FC = () => {
           onPress={handleSubmit}
           style={[styles.button, cartItems.length === 0 && { opacity: 0.5 }]}
         >
-          <Text style={styles.buttonText}>Purchase</Text>
+          <Text
+            style={[
+              styles.buttonText,
+              cartItems.length === 0 && { color: "white" },
+            ]}
+          >
+            Purchase
+          </Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -147,15 +161,15 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 8,
-    padding: 16,
-    backgroundColor: "#000",
+    borderRadius: 50,
+    padding: 8,
+    backgroundColor: "#39BBF8",
     marginHorizontal: 8,
   },
   buttonText: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "#FFFFFF",
+    color: "#00000",
   },
   totalPriceContainer: {
     flex: 1,
